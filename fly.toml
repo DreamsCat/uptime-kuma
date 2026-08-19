@@ -1,12 +1,12 @@
-# fly.toml app configuration file generated for uptime-kuma-m3by3a on 2026-08-19T06:47:22Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
 app = 'uptime-kuma-m3by3a'
 primary_region = 'sin'
 
 [build]
+  image = 'louislam/uptime-kuma:2'
+
+[env]
+  UPTIME_KUMA_HOST = '0.0.0.0'
+  UPTIME_KUMA_PORT = '3001'
 
 [http_service]
   internal_port = 3001
