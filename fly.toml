@@ -8,6 +8,11 @@ primary_region = 'sin'
   UPTIME_KUMA_HOST = '0.0.0.0'
   UPTIME_KUMA_PORT = '3001'
 
+[mounts]
+  source = "uptime_kuma_data"
+  destination = "/app/data"
+  processes = ["app"]
+
 [http_service]
   internal_port = 3001
   force_https = true
