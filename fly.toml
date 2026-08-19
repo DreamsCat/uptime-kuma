@@ -1,15 +1,20 @@
-# fly.toml app configuration file generated for uptime-kuma-rug35q on 2026-08-19T06:45:16Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'uptime-kuma-rug35q'
+app = 'uptime-kuma-m3by3a'
 primary_region = 'sin'
 
 [build]
+  image = 'louislam/uptime-kuma:2'
+
+[env]
+  UPTIME_KUMA_HOST = '0.0.0.0'
+  UPTIME_KUMA_PORT = '3001'
+
+[mounts]
+  source = "uptime_kuma_data"
+  destination = "/app/data"
+  processes = ["app"]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 3001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
@@ -17,7 +22,6 @@ primary_region = 'sin'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '256mb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 256
