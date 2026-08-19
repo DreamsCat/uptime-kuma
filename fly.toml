@@ -1,4 +1,4 @@
-app = 'uptime-kuma-m3by3a'
+app = 'uptime'
 primary_region = 'sin'
 
 [build]
