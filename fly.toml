@@ -1,15 +1,15 @@
-# fly.toml app configuration file generated for uptime-kuma-rug35q on 2026-08-19T06:29:43Z
+# fly.toml app configuration file generated for uptime-kuma-m3by3a on 2026-08-19T06:47:22Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'uptime-kuma-rug35q'
+app = 'uptime-kuma-m3by3a'
 primary_region = 'sin'
 
 [build]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 3001
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
